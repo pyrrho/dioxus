@@ -23,7 +23,6 @@ web-sys = { version = "0.3.60", optional = true, features = [
     "ScrollRestoration",
 ] }
 js-sys = { version = "0.3.63", optional = true }
-gloo-utils = { version = "0.1.6", optional = true }
 dioxus-liveview = { workspace = true, optional = true }
 dioxus-ssr = { workspace = true, optional = true }
 dioxus-fullstack = { workspace = true, optional = true }
@@ -35,7 +34,7 @@ default = []
 ssr = ["dioxus-ssr/incremental", "tokio", "dioxus-fullstack?/server"]
 liveview = ["dioxus-liveview", "tokio", "dep:serde", "serde_json"]
 wasm_test = []
-web = ["gloo", "web-sys", "wasm-bindgen", "gloo-utils", "js-sys", "dioxus-router-macro/web"]
+web = ["gloo", "web-sys", "wasm-bindgen", "js-sys", "dioxus-router-macro/web"]
 fullstack = ["dioxus-fullstack"]
 
 [dev-dependencies]

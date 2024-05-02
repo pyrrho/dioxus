@@ -2287,12 +2287,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "dioxus-debug-cell"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2ea539174bb236e0e7dc9c12b19b88eae3cb574dedbd0252a2d43ea7e6de13e2"
-
-[[package]]
 name = "dioxus-desktop"
 version = "0.5.2"
 dependencies = [
@@ -2405,15 +2399,11 @@ version = "0.5.2"
 dependencies = [
  "dioxus",
  "dioxus-core 0.5.2",
- "dioxus-debug-cell",
  "dioxus-signals",
  "futures-channel",
  "futures-util",
  "generational-box",
- "slab",
- "thiserror",
  "tokio",
- "tracing",
  "web-sys",
 ]
 
@@ -2444,7 +2434,6 @@ dependencies = [
  "dioxus-rsx",
  "enumset",
  "euclid",
- "futures-channel",
  "generational-box",
  "keyboard-types",
  "rfd",
@@ -2586,7 +2575,6 @@ dependencies = [
  "dioxus-router-macro",
  "dioxus-ssr",
  "gloo",
- "gloo-utils 0.1.7",
  "js-sys",
  "serde",
  "serde_json",
@@ -2634,8 +2622,6 @@ dependencies = [
  "futures-util",
  "generational-box",
  "once_cell",
- "parking_lot",
- "rustc-hash",
  "serde",
  "simple_logger",
  "tokio",
