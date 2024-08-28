@@ -4177,11 +4177,11 @@ dependencies = [
 
 [[package]]
 name = "gix-fs"
-version = "0.11.2"
+version = "0.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6adf99c27cdf17b1c4d77680c917e0d94d8783d4e1c73d3be0d1d63107163d7a"
+checksum = "f2bfe6249cfea6d0c0e0990d5226a4cb36f030444ba9e35e0639275db8f98575"
 dependencies = [
- "fastrand 2.1.0",
+ "fastrand 2.1.1",
  "gix-features",
  "gix-utils",
 ]
@@ -4287,9 +4287,9 @@ dependencies = [
 
 [[package]]
 name = "gix-tempfile"
-version = "14.0.1"
+version = "14.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "006acf5a613e0b5cf095d8e4b3f48c12a60d9062aa2b2dd105afaf8344a5600c"
+checksum = "046b4927969fa816a150a0cda2e62c80016fe11fb3c3184e4dddf4e542f108aa"
 dependencies = [
  "gix-fs",
  "libc",
@@ -6083,7 +6083,7 @@ dependencies = [
 [[package]]
 name = "manganis"
 version = "0.3.0-alpha.1"
-source = "git+https://github.com/pyrrho/manganis.git?branch=bump_pin_swc#7aa69b2b9b668c7e1cf748df4fc2147108525a02"
+source = "git+https://github.com/pyrrho/manganis.git?branch=bump_pin_swc#2b5bc48ef83676a8da18df8eace5ef209db0239d"
 dependencies = [
  "manganis-macro",
 ]
@@ -6091,7 +6091,7 @@ dependencies = [
 [[package]]
 name = "manganis-cli-support"
 version = "0.3.0-alpha.1"
-source = "git+https://github.com/pyrrho/manganis.git?branch=bump_pin_swc#7aa69b2b9b668c7e1cf748df4fc2147108525a02"
+source = "git+https://github.com/pyrrho/manganis.git?branch=bump_pin_swc#2b5bc48ef83676a8da18df8eace5ef209db0239d"
 dependencies = [
  "anyhow",
  "image 0.25.2",
@@ -6118,7 +6118,7 @@ dependencies = [
 [[package]]
 name = "manganis-common"
 version = "0.3.0-alpha.1"
-source = "git+https://github.com/pyrrho/manganis.git?branch=bump_pin_swc#7aa69b2b9b668c7e1cf748df4fc2147108525a02"
+source = "git+https://github.com/pyrrho/manganis.git?branch=bump_pin_swc#2b5bc48ef83676a8da18df8eace5ef209db0239d"
 dependencies = [
  "anyhow",
  "base64 0.21.7",
@@ -6134,7 +6134,7 @@ dependencies = [
 [[package]]
 name = "manganis-macro"
 version = "0.3.0-alpha.1"
-source = "git+https://github.com/pyrrho/manganis.git?branch=bump_pin_swc#7aa69b2b9b668c7e1cf748df4fc2147108525a02"
+source = "git+https://github.com/pyrrho/manganis.git?branch=bump_pin_swc#2b5bc48ef83676a8da18df8eace5ef209db0239d"
 dependencies = [
  "manganis-common",
  "proc-macro2",
@@ -10747,7 +10747,7 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "21bebf2b7c9e0a515f6e0f8c51dc0f8e4696391e6f1ff30379559f8365fb0df7"
 dependencies = [
- "rustix 0.38.34",
+ "rustix 0.38.35",
  "windows-sys 0.48.0",
 ]
 
