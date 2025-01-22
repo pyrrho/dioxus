@@ -266,25 +266,26 @@ impl BuildRequest {
         // Set the target, profile and features that vary between the app and server builds
         if self.build.platform() == Platform::Server {
             cargo_args.push("--profile".to_string());
-            match self.build.release {
-                true => cargo_args.push("release".to_string()),
-                false => cargo_args.push(self.build.server_profile.to_string()),
-            };
+            cargo_args.push(
+                self.build
+                    .server_profile
+                    .as_ref()
+                    .expect(
+                        "the BuildArgs::server_profile should have been set either directly or \
+                         via BuildArgs::resolve",
+                    )
+                    .to_string(),
+            );
         } else {
-            // Add required profile flags. --release overrides any custom profiles.
-            let custom_profile = &self.build.profile.as_ref();
-            if custom_profile.is_some() || self.build.release {
+            if self.build.release && self.build.profile.is_none() {
+                panic!(
+                    "the BuildArgs::profile should have been set either directly, or via \
+                     BuildArgs::resolve",
+                );
+            }
+            if let Some(ref profile) = self.build.profile {
                 cargo_args.push("--profile".to_string());
-                match self.build.release {
-                    true => cargo_args.push("release".to_string()),
-                    false => {
-                        cargo_args.push(
-                            custom_profile
-                                .expect("custom_profile should have been checked by is_some")
-                                .to_string(),
-                        );
-                    }
-                };
+                cargo_args.push(profile.to_string());
             }
 
             // todo: use the right arch based on the current arch
